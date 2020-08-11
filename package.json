@@ -1,0 +1,12 @@
+{
+  "name": "gauge-taiko-template",
+  "version": "0.0.1",
+  "description": "Starter template for writing JavaScript tests for Gauge",
+  "scripts": {
+    "test": "npx gauge run specs/"
+  },
+  "dependencies": {
+    "@getgauge/cli": "^1.1.1",
+    "taiko": "latest"
+  }
+}

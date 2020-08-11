@@ -1,0 +1,13 @@
+name: tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Gauge Specs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run Tests
+        run: ./run_in_docker.sh
