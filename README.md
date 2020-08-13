@@ -2,7 +2,12 @@
 
 A seed example project illustrating testing with Gauge+Taiko in Docker, using headless chrome.
 
-Note that this project does not have a Dockerfile, i.e there is no need to build a special image.
+> Note: This project included gauge and taiko as npm dependencies, and hence does not need gauge+taiko installed in the docker image. You can use any image that has
+>  - chrome/chromium based browser
+>  - dependencies for running the browser in headless mode
+>  - nodejs runtime
+>
+>  However if you prefer to build a custom image with gauge+taiko installed, see [Building your own image](README.md#building-your-own-image)
 
 ## About
 
@@ -15,7 +20,7 @@ The project uses nodejs, gauge, gauge-js and taiko. All dependencies are managed
 _Note: In a gauge+taiko project, it is possible to let npm install both
 gauge and taiko as part of `npm install`. This takes away the need to have a docker image with these dependencies installed._
 
-To build an image with gauge and taiko preinstalled see [Dockerfile] as an example.
+To build an image with gauge and taiko preinstalled see [Dockerfile](Dockerfile) as an example.
 
 - build the image: `docker build -t gauge-taiko-node .`
   - `gauge-taiko-node` is an example name, feel free to name it appropriately.
